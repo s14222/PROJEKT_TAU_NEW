@@ -1,7 +1,7 @@
 package com.tau.account.validator;
 
 import com.tau.account.model.User;
-import com.tau.account.service.UserService;
+import com.tau.account.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;

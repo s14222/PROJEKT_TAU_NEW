@@ -10,6 +10,7 @@ public class Undead {
     private String ability;
     private Integer strength;
     private Integer health;
+    private String userName;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -51,5 +52,13 @@ public class Undead {
 
     public void setHealth(Integer health) {
         this.health = health;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }

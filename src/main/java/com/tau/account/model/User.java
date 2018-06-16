@@ -2,6 +2,7 @@ package com.tau.account.model;
 
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -9,10 +10,9 @@ import java.util.Set;
 public class User {
     private Long id;
     private String username;
-    //private String email;
     private String password;
     private String passwordConfirm;
-
+    private List<Undead> undeadList;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -36,15 +36,6 @@ public class User {
         this.username = username;
     }
 
-
-    /*public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }*/
-
     public String getPassword() {
 
         return password;
@@ -54,8 +45,6 @@ public class User {
 
         this.password = password;
     }
-
-
 
     @Transient
     public String getPasswordConfirm() {
@@ -67,5 +56,12 @@ public class User {
         this.passwordConfirm = passwordConfirm;
     }
 
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    public List<Undead> getUndeadList() {
+        return undeadList;
+    }
 
+    public void setUndeadList(List<Undead> undeadList) {
+        this.undeadList = undeadList;
+    }
 }

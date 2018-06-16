@@ -2,11 +2,10 @@ package com.tau.account.service;
 
 import com.tau.account.model.User;
 import com.tau.account.repository.UserRepository;
+import com.tau.account.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.HashSet;
 
 @Service
 public class UserServiceImpl implements UserService {

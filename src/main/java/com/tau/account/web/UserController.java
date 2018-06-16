@@ -1,8 +1,8 @@
 package com.tau.account.web;
 
 import com.tau.account.model.User;
-import com.tau.account.service.SecurityService;
-import com.tau.account.service.UserService;
+import com.tau.account.service.interfaces.SecurityService;
+import com.tau.account.service.interfaces.UserService;
 import com.tau.account.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,6 +32,7 @@ public class UserController {
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
+
         userValidator.validate(userForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
@@ -42,7 +43,7 @@ public class UserController {
 
         securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
 
-        return "redirect:/welcome";
+        return "redirect:/addUndead";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -56,8 +57,13 @@ public class UserController {
         return "login";
     }
 
-    @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public String welcome(Model model) {
         return "welcome";
+    }
+
+    @RequestMapping(value = {"/welcome"}, method = RequestMethod.GET)
+    public String addUndead(Model model) {
+        return "addUndead";
     }
 }

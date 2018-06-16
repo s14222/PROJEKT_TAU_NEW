@@ -1,4 +1,4 @@
-package com.tau.account.service;
+package com.tau.account.service.interfaces;
 
 public interface SecurityService {
     String findLoggedInUsername();
