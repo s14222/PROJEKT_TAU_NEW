@@ -15,5 +15,8 @@ public interface UndeadService {
     List<Undead> findAll();
 
     Undead findByName(String name);
-    //List<Undead> findByUserName(String userName);
+
+    List<Undead> findByUserName(String username);
+
+    Undead findById(Long Id);
 }

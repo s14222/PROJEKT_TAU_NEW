@@ -31,7 +31,7 @@ public class UndeadServiceImpl implements UndeadService {
 
     @Override
     public void update(Undead undead) {
-
+        undeadRepository.save(undead);
     }
 
     @Override
@@ -44,5 +44,16 @@ public class UndeadServiceImpl implements UndeadService {
     @Override
     public Undead findByName(String name) {
         return null;
+    }
+
+
+    @Override
+    public List<Undead> findByUserName(String username) {
+        return undeadRepository.findByUserName(username);
+    }
+
+    @Override
+    public Undead findById(Long Id) {
+        return undeadRepository.findById(Id);
     }
 }

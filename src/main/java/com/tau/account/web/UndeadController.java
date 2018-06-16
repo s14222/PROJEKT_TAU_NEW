@@ -5,8 +5,6 @@ import com.tau.account.service.interfaces.UndeadService;
 import com.tau.account.validator.UndeadValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -34,16 +32,12 @@ public class UndeadController {
         List<Undead> undeadList = undeadService.findAll();
         model.addAttribute("undeadList", undeadList);
 
-        return "undeadList";
-    }
 
-    @RequestMapping(value = "/undeadList", method = RequestMethod.GET)
-    public String UndeadList(Model model) {
+        Undead undeadToUpdate = undeadService.findById(2L);
+        undeadToUpdate.setHealth(300);
+        undeadService.update(undeadToUpdate);
 
-        List<Undead> undeadList = undeadService.findAll();
-        model.addAttribute("undeadList", undeadList);
-
-        return "undeadList";
+        return "addUndead";
     }
 
     @RequestMapping(value = "/addUndead", method = RequestMethod.POST)
@@ -52,7 +46,7 @@ public class UndeadController {
         undeadValidator.validate(undead, bindingResult);
 
         if (bindingResult.hasErrors()) {
-            return "undeadList";
+            return "addUndead";
         }
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -63,7 +57,6 @@ public class UndeadController {
 
         undeadService.save(undead);
 
-         return "";
+        return "";
     }
-
 }
