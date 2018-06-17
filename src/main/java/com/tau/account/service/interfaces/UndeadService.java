@@ -10,8 +10,6 @@ public interface UndeadService {
 
     void delete(Undead undead);
 
-    void update(Undead undead);
-
     List<Undead> findAll();
 
     Undead findByName(String name);

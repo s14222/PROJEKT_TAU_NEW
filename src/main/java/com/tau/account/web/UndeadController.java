@@ -33,14 +33,6 @@ public class UndeadController {
         return "addUndead";
     }
 
-    @RequestMapping(value = "/edit", method = RequestMethod.PUT)
-    public String edit(Model model, Undead undead){
-
-        undeadService.update(undead);
-
-        return "addUndead";
-    }
-
     @RequestMapping(value = "/delete/{undeadId}", method = RequestMethod.GET)
     public String delete(Model model, @PathVariable String undeadId){
 

@@ -16,13 +16,14 @@
         <ul class="nav navbar-nav">
 
             <c:if test="${!isLoggedIn}">
-                <li><a href="/login">Login</a></li>
-                <li><a href="/registration">Register</a></li>
+                <li><a id="loginId" href="/login">Login</a></li>
+                <li><a id="registerId" href="/registration">Register</a></li>
             </c:if>
             <c:if test="${isLoggedIn}">
-                <li><a href="/addUndead">Add Undead</a></li>
-                <li><a onclick="document.forms['logoutForm'].submit()">Logout</a></li>
+                <li><a id="addUndeadId" href="/addUndead">Add Undead</a></li>
+                <li><a id="logoutId" onclick="document.forms['logoutForm'].submit()">Logout</a></li>
                     <c:if test="${pageContext.request.userPrincipal.name != null}">
+                        <!-- wylogowanie usera -->
                         <form id="logoutForm" method="POST" action="${contextPath}/logout">
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                         </form>

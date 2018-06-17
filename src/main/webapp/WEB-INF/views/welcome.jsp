@@ -23,7 +23,7 @@
 <jsp:include page="/layout"/>
 <div class="container">
 
-        <table class="table table-striped">
+        <table id="tableListUndead" class="table table-striped">
             <thead>
             <th>Name</th>
             <th>Strength</th>

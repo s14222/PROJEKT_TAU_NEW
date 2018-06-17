@@ -10,8 +10,6 @@ public interface UndeadRepository extends JpaRepository<Undead, Long> {
 
     void delete(Undead undead);
 
-    //void update(Undead undead);
-
     List<Undead> findAll();
 
     List<Undead> findByUserName(String username);

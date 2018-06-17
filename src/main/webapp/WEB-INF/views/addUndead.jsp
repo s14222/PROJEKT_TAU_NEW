@@ -38,13 +38,13 @@
 
         <div class="form-group ${error != null ? 'has-error' : ''}">
             <span>${message}</span>
-            <input name="Name" type="text" class="form-control" placeholder="Name"
+            <input name="Name" type="text" id="nameUndeadInputId" class="form-control" placeholder="Name"
                    autofocus="true"/>
-            <input name="Ability" type="text"class="form-control" placeholder="Ability"/>
+            <input name="Ability" type="text" id="abilityUndeadInputId" class="form-control" placeholder="Ability"/>
 
-            <input name="Strength" type="number" class="form-control" placeholder="Strength"/>
+            <input name="Strength" type="number" id="strengthUndeadInputId" class="form-control" placeholder="Strength"/>
 
-            <input name="Health" type="number" class="form-control" placeholder="Health"/>
+            <input name="Health" type="number" id="healthUndeadInputId" class="form-control" placeholder="Health"/>
 
 
             <span>${error}</span>
@@ -56,14 +56,13 @@
 
     </form>
     <div class="container">
-        <table class="table table-striped">
+        <table id="tableAddUndead" class="table table-striped">
             <thead>
             <th>Name</th>
             <th>Strength</th>
             <th>Health</th>
             <th>Ability</th>
             <th>Author</th>
-            <th>Edit</th>
             <th>Delete</th>
             </thead>
 
@@ -75,8 +74,7 @@
                     <td><c:out value="${undead.health}"/></td>
                     <td><c:out value="${undead.ability}"/></td>
                     <td><c:out value="${undead.userName}"/></td>
-                    <td><a href="/edit">Edit</a></td>
-                    <td><a href="<c:url value='/delete/${undead.id}' />" >Delete</a></td>
+                    <td><a id="deleteUndeadId" href="<c:url value='/delete/${undead.id}' />" >Delete</a></td>
 
                 </tr>
             </c:forEach>

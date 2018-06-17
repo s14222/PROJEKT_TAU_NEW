@@ -29,10 +29,6 @@ public class UndeadServiceImpl implements UndeadService {
 
     }
 
-    @Override
-    public void update(Undead undead) {
-        undeadRepository.save(undead);
-    }
 
     @Override
     public List<Undead> findAll() {
