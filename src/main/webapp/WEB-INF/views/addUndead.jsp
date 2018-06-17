@@ -40,7 +40,7 @@
             <span>${message}</span>
             <input name="Name" type="text" class="form-control" placeholder="Name"
                    autofocus="true"/>
-            <input name="Ability" type="text" class="form-control" placeholder="Ability"/>
+            <input name="Ability" type="text"class="form-control" placeholder="Ability"/>
 
             <input name="Strength" type="number" class="form-control" placeholder="Strength"/>
 

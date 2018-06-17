@@ -29,7 +29,7 @@
         <h2 class="form-signin-heading">Create your account</h2>
         <spring:bind path="username">
             <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input type="text" path="username" class="form-control" placeholder="Username"
+                <form:input type="text" path="username" id="usernameInputId" class="form-control" placeholder="Username"
                             autofocus="true"/>
                 <form:errors path="username"/>
             </div>
@@ -37,14 +37,14 @@
 
         <spring:bind path="password">
             <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input type="password" path="password" class="form-control" placeholder="Password"/>
+                <form:input type="password" path="password" id="passwordInputId" class="form-control" placeholder="Password"/>
                 <form:errors path="password"/>
             </div>
         </spring:bind>
 
         <spring:bind path="passwordConfirm">
             <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input type="password" path="passwordConfirm" class="form-control"
+                <form:input type="password" path="passwordConfirm" id="passwordConfirmInputId" class="form-control"
                             placeholder="Confirm your password"/>
                 <form:errors path="passwordConfirm"/>
             </div>
