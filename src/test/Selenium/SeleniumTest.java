@@ -1,32 +1,25 @@
 package Selenium;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Ignore;
-import org.openqa.selenium.support.ui.Select;
+import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 public class SeleniumTest {
     private WebDriver driver;
     private String baseUrl;
-    private boolean acceptNextAllert = true;
     private StringBuffer verificationErrors = new StringBuffer();
-
-
-    public String username = "ABCDefg";
-    public String password = "123456abc";
-    public String confPassword = password;
-
 
     @Before
     public void setUp() throws Exception {
@@ -42,8 +35,77 @@ public class SeleniumTest {
 
         register();
 
-        //fillPersonalInformation("ABCDEFGH", "maknaeLine95", "maknaeLine95");
+        //wpisz do forma
+        fillPersonalInformation("qkied", "qwertyui", "qwertyui");
+        submit();
 
+        if (checkIfErrorExist("#userForm")) {
+            //sprawdz czy jest blad w username
+            String alertMessage = driver.findElement(By.id("username.errors")).getText();
+
+            assertNotNull(alertMessage);
+
+            if (alertMessage != null) {
+
+                //popraw wpisujac to do forma
+                fillPersonalInformation(usernameRandom("drugitest"), "qwer", "qwertyui");
+                submit();
+
+                if (checkIfErrorExist("#userForm")) {
+
+                    String alertMessage1 = driver.findElement(By.id("password.errors")).getText();
+                    assertNotNull(alertMessage1);
+
+                    if (alertMessage1 != null) {
+
+                        //popraw i wpisz
+                        fillPersonalInformation(usernameRandom("trzecitest"), "qwertyui", "qwertyuio");
+                        submit();
+
+                        if (checkIfErrorExist("#userForm")) {
+
+                            String alertMessage2 = driver.findElement(By.id("passwordConfirm.errors")).getText();
+                            assertNotNull(alertMessage2);
+
+                            if (alertMessage2 != null) {
+                                //popraw wpisujac to do forma
+                                fillPersonalInformation(usernameRandom("czwarty"), "qwertyui", "qwertyui");
+                                submit();
+                            }
+                        } else {
+                            fillPersonalInformation(usernameRandom("qkilled"), "qwertyui", "qwertyui");
+                            submit();
+                        }
+                    }
+                } else {
+                    fillPersonalInformation(usernameRandom("qkilled"), "qwertyui", "qwertyui");
+                    submit();
+                }
+            }
+        } else {
+            fillPersonalInformation(usernameRandom("qkilled"), "qwertyui", "qwertyui");
+            submit();
+        }
+
+        //sprawdzanie tekstu elementu DOM
+        assertEquals("Strength", driver.findElement(By.cssSelector("#tableAddUndead > thead > tr > th:nth-child(2)")).getText());
+
+        //sprawdza czy element jest wyswietlony
+        assertTrue(driver.findElement(By.linkText("Logout")).isDisplayed());
+
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("target/screenshotAfterTest.png"));
+
+        Thread.sleep(3000);
+        logOut();
+    }
+
+    private boolean checkIfErrorExist(String cssSelector) throws Exception {
+        Thread.sleep(3000);
+        return driver.findElement(By.cssSelector(cssSelector)).isDisplayed();
+    }
+
+    private void fillPersonalInformation(String username, String password, String confPassword) {
         driver.findElement(By.id("usernameInputId")).clear();
         driver.findElement(By.id("usernameInputId")).sendKeys(username);
 
@@ -52,71 +114,13 @@ public class SeleniumTest {
 
         driver.findElement(By.id("passwordConfirmInputId")).clear();
         driver.findElement(By.id("passwordConfirmInputId")).sendKeys(confPassword);
-
-        submit();
-
-        if (checkIfErrorExist("#userForm")) {
-            String alertMessage = driver.findElement(By.id("username.errors")).getText();
-            String alertMessage1 = driver.findElement(By.id("password.errors")).getText();
-            String alertMessage2 = driver.findElement(By.id("passwordConfirm.errors")).getText();
-
-            if (alertMessage != null) {
-                fillPersonalInformation(username, null, null);
-                submit();
-            }
-
-            if (alertMessage1 != null) {
-                fillPersonalInformation(null, password, null);
-                submit();
-            }
-
-            if (alertMessage2 != null) {
-                fillPersonalInformation(null, null, confPassword);
-                submit();
-            }
-
-        }
-
-
-
-        //sprawdza czy element jest wyswietlony
-        assertEquals(true, driver.findElement(By.linkText("Logout")).isDisplayed());
-
-        Thread.sleep(3000);
-        logOut();
-    }
-
-
-    private boolean checkIfErrorExist(String cssSelector) throws Exception {
-        Thread.sleep(3000);
-        return driver.findElement(By.cssSelector(cssSelector)).isDisplayed();
-    }
-
-
-    private void fillForm(String username, String password, String confPassword) {
-
-        fillPersonalInformation(username, password, confPassword);
-
-    }
-
-
-    private void fillPersonalInformation(String username, String password, String confPassword) {
-        driver.findElement(By.id("username")).clear();
-        driver.findElement(By.id("username")).sendKeys(username);
-
-        driver.findElement(By.id("password")).clear();
-        driver.findElement(By.id("password")).sendKeys(password);
-
-        driver.findElement(By.id("passwordConfirm")).clear();
-        driver.findElement(By.id("passwordConfirm")).sendKeys(confPassword);
-
     }
 
     private void register() {
         driver.findElement(By.linkText("Register")).click();
     }
 
-    private void submit(){
+    private void submit() {
         driver.findElement(By.cssSelector("#userForm > button")).click();
     }
 
@@ -132,4 +136,13 @@ public class SeleniumTest {
             fail(verificationErrorString);
         }
     }
+
+    private String usernameRandom(String username) {
+        Integer c;
+        Random rand = new Random();
+        c = rand.nextInt(30000);
+        username = username + c.toString();
+        return username;
+    }
+
 }
