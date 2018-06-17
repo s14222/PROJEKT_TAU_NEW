@@ -23,17 +23,29 @@
 <jsp:include page="/layout"/>
 <div class="container">
 
-    <c:if test="${pageContext.request.userPrincipal.name != null}">
-        <form id="logoutForm" method="POST" action="${contextPath}/logout">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
+        <table class="table table-striped">
+            <thead>
+            <th>Name</th>
+            <th>Strength</th>
+            <th>Health</th>
+            <th>Ability</th>
+            <th>Author</th>
+            </thead>
 
-        <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a>
-        </h2>
+            <c:forEach items="${undeadList}" var="undead">
 
-    </c:if>
+                <tr>
+                    <td><c:out value="${undead.name}"/></td>
+                    <td><c:out value="${undead.strength}"/></td>
+                    <td><c:out value="${undead.health}"/></td>
+                    <td><c:out value="${undead.ability}"/></td>
+                    <td><c:out value="${undead.userName}"/></td>
+                </tr>
+            </c:forEach>
+        </table>
 
-</div>
+    </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
 </body>

@@ -10,9 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,15 +30,30 @@ public class UndeadController {
         List<Undead> undeadList = undeadService.findAll();
         model.addAttribute("undeadList", undeadList);
 
+        return "addUndead";
+    }
 
-        Undead undeadToUpdate = undeadService.findById(2L);
-        undeadToUpdate.setHealth(300);
-        undeadService.update(undeadToUpdate);
+    @RequestMapping(value = "/edit", method = RequestMethod.PUT)
+    public String edit(Model model, Undead undead){
+
+        undeadService.update(undead);
 
         return "addUndead";
     }
 
-    @RequestMapping(value = "/addUndead", method = RequestMethod.POST)
+    @RequestMapping(value = "/delete/{undeadId}", method = RequestMethod.GET)
+    public String delete(Model model, @PathVariable String undeadId){
+
+        Long id = Long.parseLong(undeadId);
+
+        Undead undead = undeadService.findById(id);
+
+        undeadService.delete(undead);
+
+        return "redirect:/addUndead";
+    }
+
+    @RequestMapping(value = "/saveUndead", method = RequestMethod.POST)
     public String save(@ModelAttribute("undeadForm") Undead undead, BindingResult bindingResult) {
 
         undeadValidator.validate(undead, bindingResult);
@@ -57,6 +70,6 @@ public class UndeadController {
 
         undeadService.save(undead);
 
-        return "";
+        return "redirect:/addUndead";
     }
 }

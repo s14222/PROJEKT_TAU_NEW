@@ -33,7 +33,7 @@
 
 
 
-    <form method="POST" action="${contextPath}/addUndead" class="form-signin">
+    <form method="POST" action="${contextPath}/saveUndead" class="form-signin">
         <h2 class="form-heading">Add Undead</h2>
 
         <div class="form-group ${error != null ? 'has-error' : ''}">
@@ -63,6 +63,8 @@
             <th>Health</th>
             <th>Ability</th>
             <th>Author</th>
+            <th>Edit</th>
+            <th>Delete</th>
             </thead>
 
             <c:forEach items="${undeadList}" var="undead">
@@ -73,6 +75,9 @@
                     <td><c:out value="${undead.health}"/></td>
                     <td><c:out value="${undead.ability}"/></td>
                     <td><c:out value="${undead.userName}"/></td>
+                    <td><a href="/edit">Edit</a></td>
+                    <td><a href="<c:url value='/delete/${undead.id}' />" >Delete</a></td>
+
                 </tr>
             </c:forEach>
         </table>
