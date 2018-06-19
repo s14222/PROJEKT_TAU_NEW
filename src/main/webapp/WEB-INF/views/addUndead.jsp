@@ -33,7 +33,7 @@
 
 
 
-    <form method="POST" action="${contextPath}/saveUndead" class="form-signin">
+    <form method="POST" action="${contextPath}/saveUndead" id="undeadFormId" class="form-signin">
         <h2 class="form-heading">Add Undead</h2>
 
         <div class="form-group ${error != null ? 'has-error' : ''}">

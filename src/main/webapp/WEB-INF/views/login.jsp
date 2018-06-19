@@ -26,7 +26,7 @@
 <jsp:include page="/layout"/>
 <div class="container">
 
-    <form method="POST" action="${contextPath}/login" class="form-signin">
+    <form method="POST" action="${contextPath}/login" id="loginFormId" class="form-signin">
         <h2 class="form-heading">Log in</h2>
 
         <div class="form-group ${error != null ? 'has-error' : ''}">

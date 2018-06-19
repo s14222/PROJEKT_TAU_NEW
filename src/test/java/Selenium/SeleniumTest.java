@@ -14,7 +14,9 @@ import java.io.File;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+
 import static org.junit.Assert.*;
+
 
 public class SeleniumTest {
     private WebDriver driver;
@@ -25,7 +27,7 @@ public class SeleniumTest {
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver", "D:\\TAU\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
-        baseUrl = "http://localhost:8083";
+        baseUrl = "http://localhost:8086";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
