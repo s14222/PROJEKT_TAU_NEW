@@ -40,6 +40,8 @@
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
+
+
     <!-- Enable annotation driven transaction management -->
     <tx:annotation-driven/>
 

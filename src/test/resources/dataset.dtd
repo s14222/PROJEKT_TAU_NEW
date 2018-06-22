@@ -1,0 +1,21 @@
+<!ELEMENT dataset (
+        UNDEAD*,
+        USER*)>
+
+        <!ELEMENT UNDEAD EMPTY>
+        <!ATTLIST UNDEAD
+                ID CDATA #REQUIRED
+                NAME CDATA #IMPLIED
+                ABILITY CDATA #IMPLIED
+                STRENGTH CDATA #IMPLIED
+                HEALTH CDATA #IMPLIED
+                MALE CDATA #IMPLIED
+                >
+
+        <!ELEMENT USER EMPTY>
+        <!ATTLIST USER
+                ID CDATA #REQUIRED
+                USERNAME CDATA #IMPLIED
+                PASSWORD CDATA #IMPLIED
+                PESEL CDATA #IMPLIED
+                >
