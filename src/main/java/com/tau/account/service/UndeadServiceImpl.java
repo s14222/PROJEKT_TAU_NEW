@@ -1,9 +1,13 @@
 package com.tau.account.service;
 
 import com.tau.account.model.Undead;
+import com.tau.account.model.User;
 import com.tau.account.repository.UndeadRepository;
 import com.tau.account.service.interfaces.UndeadService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,9 +21,26 @@ public class UndeadServiceImpl implements UndeadService {
 
     @Override
     public void save(Undead undead) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails user = (UserDetails) authentication.getPrincipal(); //pobiera zalogownego uzytk
 
+        String username = user.getUsername();
+        undead.setUserName(username);
         undeadRepository.save(undead);
+    }
 
+    /*@Override
+    public void saveWithUserName(Undead undead, String userName){
+        undead.setUserName(userName);
+        undeadRepository.save(undead);
+    }*/
+
+    @Override
+    public void disposeUndead(User user, Undead undead) {
+        //dispose
+        if(user.getUsername().equals(undead.getUserName())){
+            undead.setUserName("");
+        }
     }
 
     @Override
@@ -39,7 +60,7 @@ public class UndeadServiceImpl implements UndeadService {
 
     @Override
     public Undead findByName(String name) {
-        return null;
+        return undeadRepository.findByName(name);
     }
 
 
@@ -51,5 +72,10 @@ public class UndeadServiceImpl implements UndeadService {
     @Override
     public Undead findById(Long Id) {
         return undeadRepository.findById(Id);
+    }
+
+    @Override
+    public List<Undead> findByMale(Undead undeadList) {
+        return undeadRepository.findByMale(undeadList);
     }
 }

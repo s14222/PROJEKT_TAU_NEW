@@ -11,6 +11,8 @@ public class Undead {
     private Integer strength;
     private Integer health;
     private String userName;
+    private Boolean male;
+    private Long userId;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -60,5 +62,35 @@ public class Undead {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public Boolean getMale() {
+        return male;
+    }
+
+    public void setMale(Boolean male) {
+        this.male = male;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public Undead(Long id, String name, String ability, Integer strength, Integer health, String userName, Boolean male){
+
+        this.id = id;
+        this.name = name;
+        this.ability = ability;
+        this.strength = strength;
+        this.health = health;
+        this.male = male;
+    }
+
+    public Undead(){
+
     }
 }

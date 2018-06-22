@@ -17,7 +17,7 @@ import java.util.List;
 @Controller
 public class UndeadController {
 
-    @Autowired
+    @Autowired //soring sam sbie przydziela wartosc
     private UndeadService undeadService;
 
     @Autowired
@@ -53,12 +53,6 @@ public class UndeadController {
         if (bindingResult.hasErrors()) {
             return "addUndead";
         }
-
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        UserDetails user = (UserDetails) authentication.getPrincipal();
-
-        String username = user.getUsername();
-        undead.setUserName(username);
 
         undeadService.save(undead);
 

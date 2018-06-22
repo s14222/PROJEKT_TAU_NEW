@@ -13,6 +13,8 @@ public class User {
     private String password;
     private String passwordConfirm;
     private List<Undead> undeadList;
+    private String pesel;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -56,12 +58,22 @@ public class User {
         this.passwordConfirm = passwordConfirm;
     }
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany
+    //(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name="userId")
     public List<Undead> getUndeadList() {
         return undeadList;
     }
 
     public void setUndeadList(List<Undead> undeadList) {
         this.undeadList = undeadList;
+    }
+
+    @Column(unique = true, nullable = false)
+    public String getPesel() {
+        return pesel;
+    }
+    public void setPesel(String pesel) {
+        this.pesel = pesel;
     }
 }

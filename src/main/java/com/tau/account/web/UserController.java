@@ -34,6 +34,10 @@ public class UserController {
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(Model model) {
         //wyswi. form
+        //User user = userService.findByUsername("qkilled");
+        User user = userService.findById(5L);
+        //List<Undead> undeads = userService.findByUndeadList(user);
+
         model.addAttribute("userForm", new User());
 
         return "registration";

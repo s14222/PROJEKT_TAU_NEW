@@ -41,48 +41,47 @@ public class SeleniumTest {
         fillPersonalInformation("qkied", "qwertyui", "qwertyui");
         submit();
 
-        if (checkIfErrorExist("#userForm")) {
+        if (checkIfErrorExist("#registerFormId")) {
             //sprawdz czy jest blad w username
-            String alertMessage = driver.findElement(By.id("username.errors")).getText();
-
+            String alertMessage = driver.findElement(By.cssSelector("#username\\2e errors")).getText();
+            System.out.println("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"+ alertMessage);
             assertNotNull(alertMessage);
 
-            if (alertMessage != null) {
+            driver.findElement(By.id("usernameInputId")).clear();
 
-                //popraw wpisujac to do forma
-                fillPersonalInformation(usernameRandom("drugitest"), "qwer", "qwertyui");
-                submit();
+            //popraw wpisujac to do forma
+            fillPersonalInformation(usernameRandom("drugitest"), "qwer", "qwertyui");
+            submit();
 
-                if (checkIfErrorExist("#userForm")) {
+            if (checkIfErrorExist("#registerFormId")) {
 
-                    String alertMessage1 = driver.findElement(By.id("password.errors")).getText();
-                    assertNotNull(alertMessage1);
+                String alertMessage1 = driver.findElement(By.id("password.errors")).getText();
+                assertNotNull(alertMessage1);
 
-                    if (alertMessage1 != null) {
+                if (alertMessage1 != null) {
 
-                        //popraw i wpisz
-                        fillPersonalInformation(usernameRandom("trzecitest"), "qwertyui", "qwertyuio");
-                        submit();
+                    //popraw i wpisz
+                    fillPersonalInformation(usernameRandom("trzecitest"), "qwertyui", "qwertyuio");
+                    submit();
 
-                        if (checkIfErrorExist("#userForm")) {
+                    if (checkIfErrorExist("#registerFormId")) {
 
-                            String alertMessage2 = driver.findElement(By.id("passwordConfirm.errors")).getText();
-                            assertNotNull(alertMessage2);
+                        String alertMessage2 = driver.findElement(By.id("passwordConfirm.errors")).getText();
+                        assertNotNull(alertMessage2);
 
-                            if (alertMessage2 != null) {
-                                //popraw wpisujac to do forma
-                                fillPersonalInformation(usernameRandom("czwarty"), "qwertyui", "qwertyui");
-                                submit();
-                            }
-                        } else {
-                            fillPersonalInformation(usernameRandom("qkilled"), "qwertyui", "qwertyui");
+                        if (alertMessage2 != null) {
+                            //popraw wpisujac to do forma
+                            fillPersonalInformation(usernameRandom("czwarty"), "qwertyui", "qwertyui");
                             submit();
                         }
+                    } else {
+                        fillPersonalInformation(usernameRandom("qkilled"), "qwertyui", "qwertyui");
+                        submit();
                     }
-                } else {
-                    fillPersonalInformation(usernameRandom("qkilled"), "qwertyui", "qwertyui");
-                    submit();
                 }
+            } else {
+                fillPersonalInformation(usernameRandom("qkilled"), "qwertyui", "qwertyui");
+                submit();
             }
         } else {
             fillPersonalInformation(usernameRandom("qkilled"), "qwertyui", "qwertyui");
@@ -123,7 +122,7 @@ public class SeleniumTest {
     }
 
     private void submit() {
-        driver.findElement(By.cssSelector("#userForm > button")).click();
+        driver.findElement(By.id("buttonRegistrationId")).click();
     }
 
     private void logOut() {
