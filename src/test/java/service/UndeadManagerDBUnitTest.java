@@ -1,22 +1,15 @@
 package service;
 
-
 import com.github.springtestdbunit.DbUnitTestExecutionListener;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.github.springtestdbunit.annotation.ExpectedDatabase;
 import com.github.springtestdbunit.assertion.DatabaseAssertionMode;
-import com.tau.account.model.Undead;
 import com.tau.account.model.User;
-import com.tau.account.repository.UndeadRepository;
-import com.tau.account.repository.UserRepository;
 import com.tau.account.service.interfaces.UndeadService;
 import com.tau.account.service.interfaces.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
@@ -26,13 +19,11 @@ import org.springframework.test.context.support.DirtiesContextTestExecutionListe
 import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:/appconfig-data.xml"})
+@ContextConfiguration(locations = {"classpath:/appconfig-data.xml"})
 @Rollback
 @Transactional(transactionManager = "transactionManager")
 @TestExecutionListeners({
@@ -43,19 +34,17 @@ import static org.junit.Assert.assertNotNull;
 })
 public class UndeadManagerDBUnitTest {
 
- //  @Autowired
-   UndeadService undeadService;
+    @Autowired
+    UndeadService undeadService;
 
- //  @Autowired
-   UserService userService;
-
-
+    @Autowired
+    UserService userService;
 
     @Test
     @DatabaseSetup(value = {"/fullData.xml"}) //wczytywanie danych z pliku
     @ExpectedDatabase(value = "/aaddUserData.xml", //oczekiwane dane wyjsciowe
             assertionMode = DatabaseAssertionMode.NON_STRICT)
-    public void addUserCheck() throws Exception{
+    public void addUserCheck() throws Exception {
 
         assertEquals(3, userService.findAll().size());  //oczekuje ze rozmiar wszystkich pobranych userow wynosi 3
 
@@ -75,7 +64,7 @@ public class UndeadManagerDBUnitTest {
     @DatabaseSetup(value = {"/fullData.xml"})
     @ExpectedDatabase(value = "/adeleteData.xml",
             assertionMode = DatabaseAssertionMode.NON_STRICT)
-    public void deleteUserCheck() throws Exception{
+    public void deleteUserCheck() throws Exception {
 
         assertEquals(3, userService.findAll().size());
 
@@ -92,7 +81,7 @@ public class UndeadManagerDBUnitTest {
     @DatabaseSetup(value = {"/fullData.xml"})
     @ExpectedDatabase(value = "/aupdateData.xml",
             assertionMode = DatabaseAssertionMode.NON_STRICT)
-    public void updateUserCheck() throws Exception{
+    public void updateUserCheck() throws Exception {
 
 
         User user = userService.findByPesel("43012144859");
@@ -110,7 +99,7 @@ public class UndeadManagerDBUnitTest {
     @DatabaseSetup(value = {"/fullData.xml"})
     @ExpectedDatabase(value = "/fullData.xml",
             assertionMode = DatabaseAssertionMode.NON_STRICT)
-    public void getUserCheck() throws Exception{
+    public void getUserCheck() throws Exception {
 
         User user = userService.findByPesel("12043021547");
 
@@ -124,7 +113,7 @@ public class UndeadManagerDBUnitTest {
     @DatabaseSetup(value = {"/fullData.xml"})
     @ExpectedDatabase(value = "/adisposeUndead.xml",
             assertionMode = DatabaseAssertionMode.NON_STRICT)
-    public void disposeUndeadCheck() throws Exception{
+    public void disposeUndeadCheck() throws Exception {
 
         //usuwanie powiazania usera z undeada, czyli usuwanie undeada
         User user = userService.findByPesel("12043021547");
@@ -142,7 +131,7 @@ public class UndeadManagerDBUnitTest {
     @DatabaseSetup(value = {"/fullData.xml"})
     @ExpectedDatabase(value = "/aundeadsList.xml",
             assertionMode = DatabaseAssertionMode.NON_STRICT)
-    public void getUsersUndeads() throws Exception{
+    public void getUsersUndeads() throws Exception {
 
 //        User user = undeadManager.findUserByPesel("12043021547");
 //

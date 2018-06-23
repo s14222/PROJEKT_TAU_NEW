@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:sec="http://www.springframework.org/schema/security"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:tx="http://www.springframework.org/schema/tx"
@@ -14,12 +15,8 @@
 
     <context:property-placeholder location="application.properties"/>
 
-    <!--
-        Scans within the base package of the application for @Components to
-        configure as beans
-    -->
     <context:component-scan
-            base-package="com.tau.account.service"/>
+            base-package="com.tau.account"/>
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -29,7 +26,7 @@
     </bean>
 
 
-    <bean id="datatypeFactoryBean" class="org.dbunit.ext.hsqldb.HsqldbDataTypeFactory" />
+    <bean id="datatypeFactoryBean" class="org.dbunit.ext.mysql.MySqlDataTypeFactory" />
 
     <bean id="dbUnitDatabaseConfig" class="com.github.springtestdbunit.bean.DatabaseConfigBean">
         <property name="skipOracleRecyclebinTables" value="true"/>
@@ -52,7 +49,7 @@
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.hbm2ddl.auto">create</prop>
-                <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
             </props>
         </property>
@@ -64,6 +61,29 @@
         <property name="sessionFactory" ref="hibernateSessionFactory"/>
     </bean>
 
+    <bean id="authenticationManager" class="org.springframework.security.authentication.ProviderManager">
+        <property name="providers">
+            <list>
+                <ref bean="authenticationProvider" />
+                <ref bean="anonymousProvider" />
+            </list>
+        </property>
+    </bean>
 
+    <bean id="authenticationProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+        <property name="passwordEncoder">
+            <bean class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" />
+        </property>
+        <property name="userDetailsService" ref="userService" />
+    </bean>
+
+    <!--<bean id="anonymousProvider" class="org.springframework.security.authentication.AnonymousAuthenticationProvider">
+        <property name="key" value="SomeUniqueKeyForThisApplication" />
+    </bean>
+
+    <sec:user-service id="userService">
+        <sec:user name="bob" password="12b141f35d58b8b3a46eea65e6ac179e" authorities="ROLE_SUPERVISOR, ROLE_USER" />
+        <sec:user name="sam" password="d1a5e26d0558c455d386085fad77d427" authorities="ROLE_USER" />
+    </sec:user-service>-->
 </beans>
 

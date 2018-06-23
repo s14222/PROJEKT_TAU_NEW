@@ -13,7 +13,7 @@ public class DatabaseExport {
 
     public static void main(String[] args) throws Exception {
         Connection jdbcConnection = DriverManager.getConnection(
-                "jdbc:mysql://127.0.0.1:3306/undeaddb", "root", "");
+                "jdbc:mysql://127.0.0.1:3306/undeads", "root", "");
 
         IDatabaseConnection connection = new DatabaseConnection(jdbcConnection);
 
