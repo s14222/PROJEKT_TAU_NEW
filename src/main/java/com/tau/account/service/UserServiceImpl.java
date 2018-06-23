@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void save(User user) {
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        //user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 
         userRepository.save(user);
     }
@@ -40,11 +40,6 @@ public class UserServiceImpl implements UserService {
     public void delete(User user) {
         userRepository.delete(user);
 
-    }
-
-    @Override
-    public User findByPesel(String pesel) {
-        return userRepository.findByPesel(pesel);
     }
 
     @Override

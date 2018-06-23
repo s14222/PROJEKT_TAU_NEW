@@ -13,7 +13,6 @@ public class User {
     private String password;
     private String passwordConfirm;
     private List<Undead> undeadList;
-    private String pesel;
 
 
     @Id
@@ -69,11 +68,4 @@ public class User {
         this.undeadList = undeadList;
     }
 
-    @Column(unique = true, nullable = false)
-    public String getPesel() {
-        return pesel;
-    }
-    public void setPesel(String pesel) {
-        this.pesel = pesel;
-    }
 }

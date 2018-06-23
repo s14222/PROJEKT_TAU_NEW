@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
 
 
 public class SeleniumTest {
-    private WebDriver driver;
+  /*  private WebDriver driver;
     private String baseUrl;
     private StringBuffer verificationErrors = new StringBuffer();
 
@@ -146,5 +146,5 @@ public class SeleniumTest {
         username = username + c.toString();
         return username;
     }
-
+*/
 }

@@ -20,7 +20,6 @@ public interface UndeadService {
     Undead findById(Long Id);
 
     //List<Undead> getMaleUndeads();
-    List<Undead> findByMale(Undead undeadList);
 
    // void saveWithUserName(Undead undead, String userName);
 

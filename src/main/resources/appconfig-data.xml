@@ -49,7 +49,7 @@
       Configure Spring Data JPA and set the base package of the
       repository interfaces
     -->
-    <context:component-scan base-package="com.tau.account.*"/>
+    <!--<context:component-scan base-package="com.tau.account.*"/>-->
     <jpa:repositories base-package="com.tau.account.repository"/>
 
 </beans>

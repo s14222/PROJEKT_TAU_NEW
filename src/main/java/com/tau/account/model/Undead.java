@@ -11,7 +11,6 @@ public class Undead {
     private Integer strength;
     private Integer health;
     private String userName;
-    private Boolean male;
     private Long userId;
 
     @Id
@@ -64,13 +63,6 @@ public class Undead {
         this.userName = userName;
     }
 
-    public Boolean getMale() {
-        return male;
-    }
-
-    public void setMale(Boolean male) {
-        this.male = male;
-    }
 
     public Long getUserId() {
         return userId;
@@ -80,14 +72,13 @@ public class Undead {
         this.userId = userId;
     }
 
-    public Undead(Long id, String name, String ability, Integer strength, Integer health, String userName, Boolean male){
+    public Undead(Long id, String name, String ability, Integer strength, Integer health, String userName){
 
         this.id = id;
         this.name = name;
         this.ability = ability;
         this.strength = strength;
         this.health = health;
-        this.male = male;
     }
 
     public Undead(){

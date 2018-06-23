@@ -1,8 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset>
 
-    <USER USERNAME="WonhoUlzzang" PASSWORD="monbebe" PESEL="43012144859"/>
-    <USER USERNAME="MinYoongi" PASSWORD="army" PESEL="12043021547"/>
-    <USER USERNAME="KimYugyeom" PASSWORD="igot7" PESEL="85043021547"/>
+
+    <USER USERNAME="ShinHoseok" PASSWORD="bbbbbbb"/>
+    <USER USERNAME="WonhoUlzzang" PASSWORD="nndiction"/>
+    <USER USERNAME="KimYugyeom" PASSWORD="bubububu"/>
+
+    <USER_UNDEAD USERID="3" UNDEADID="3"/>
+    <USER_UNDEAD USERID="4" UNDEADID="6"/>
+    <USER_UNDEAD USERID="4" UNDEADID="4"/>
 
 </dataset>

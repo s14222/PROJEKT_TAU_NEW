@@ -61,29 +61,6 @@
         <property name="sessionFactory" ref="hibernateSessionFactory"/>
     </bean>
 
-    <bean id="authenticationManager" class="org.springframework.security.authentication.ProviderManager">
-        <property name="providers">
-            <list>
-                <ref bean="authenticationProvider" />
-                <ref bean="anonymousProvider" />
-            </list>
-        </property>
-    </bean>
 
-    <bean id="authenticationProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
-        <property name="passwordEncoder">
-            <bean class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" />
-        </property>
-        <property name="userDetailsService" ref="userService" />
-    </bean>
-
-    <!--<bean id="anonymousProvider" class="org.springframework.security.authentication.AnonymousAuthenticationProvider">
-        <property name="key" value="SomeUniqueKeyForThisApplication" />
-    </bean>
-
-    <sec:user-service id="userService">
-        <sec:user name="bob" password="12b141f35d58b8b3a46eea65e6ac179e" authorities="ROLE_SUPERVISOR, ROLE_USER" />
-        <sec:user name="sam" password="d1a5e26d0558c455d386085fad77d427" authorities="ROLE_USER" />
-    </sec:user-service>-->
 </beans>
 

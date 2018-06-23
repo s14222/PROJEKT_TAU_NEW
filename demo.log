@@ -3472,3 +3472,278 @@ javax.validation.ValidationException: HV000183: Unable to load 'javax.el.Express
 2018-06-23 11:17:20,825 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
 2018-06-23 11:17:21,257 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2018-06-23 11:17:21,777 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 14:43:34,185 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 14:43:34,264 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 14:43:34,280 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 14:43:34,280 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 14:43:34,327 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 14:43:34,702 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 14:43:35,061 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 14:53:14,234 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 14:53:14,312 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 14:53:14,312 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 14:53:14,312 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 14:53:14,375 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 14:53:14,718 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 14:53:15,062 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 14:55:18,109 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 14:55:18,190 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 14:55:18,192 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 14:55:18,194 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 14:55:18,234 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 14:55:18,562 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 14:55:18,921 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 14:55:20,499 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 15:27:58,214 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 15:27:58,299 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 15:27:58,300 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 15:27:58,302 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 15:27:58,350 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 15:27:58,731 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 15:27:59,109 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 15:28:00,834 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 15:31:56,101 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 15:31:56,192 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 15:31:56,193 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 15:31:56,195 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 15:31:56,245 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 15:31:56,617 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 15:31:57,004 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 15:31:58,726 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 15:41:10,486 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 15:41:10,585 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 15:41:10,587 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 15:41:10,588 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 15:41:10,640 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 15:41:11,024 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 15:41:11,412 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 15:41:13,121 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 15:43:01,238 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 15:43:01,328 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 15:43:01,330 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 15:43:01,332 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 15:43:01,379 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 15:43:01,756 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 15:43:02,131 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 15:43:04,003 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 15:44:12,130 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 15:44:12,245 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 15:44:12,246 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 15:44:12,248 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 15:44:12,295 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 15:44:12,661 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 15:44:13,036 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 15:44:14,644 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 15:50:04,910 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 15:50:05,004 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 15:50:05,004 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 15:50:05,004 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 15:50:05,067 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 15:50:05,424 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 15:50:05,806 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 15:50:07,409 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 15:53:36,931 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 15:53:37,009 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 15:53:37,009 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 15:53:37,009 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 15:53:37,064 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 15:53:37,425 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 15:53:37,808 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 15:53:39,534 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 15:55:35,797 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 15:55:35,922 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 15:55:35,922 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 15:55:35,922 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 15:55:36,016 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 15:55:36,393 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 15:55:36,738 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 15:55:38,362 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 15:57:47,346 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 15:57:47,466 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 15:57:47,466 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 15:57:47,466 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 15:57:47,560 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 15:57:47,935 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 15:57:48,252 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 15:57:49,906 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 16:05:20,488 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:05:20,597 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:05:20,613 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:05:20,613 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:05:20,707 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:05:21,050 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:05:21,377 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:05:23,012 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 16:06:52,068 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:06:52,195 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:06:52,197 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:06:52,199 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:06:52,280 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:06:52,627 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:06:52,940 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:06:54,551 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 16:07:52,550 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:07:52,674 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:07:52,674 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:07:52,674 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:07:52,753 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:07:53,127 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:07:53,460 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:07:55,027 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 16:11:25,565 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:11:25,690 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:11:25,690 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:11:25,690 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:11:25,768 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:11:26,137 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:11:26,426 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:11:28,043 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 16:14:23,718 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:14:23,841 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:14:23,841 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:14:23,841 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:14:23,919 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:14:24,328 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:14:24,643 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:14:26,279 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 16:16:50,856 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:16:50,981 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:16:50,981 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:16:50,981 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:16:51,059 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:16:51,440 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:16:51,768 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:16:53,362 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 16:20:03,722 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:20:03,862 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:20:03,862 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:20:03,862 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:20:03,940 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:20:04,329 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:20:04,615 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:20:06,242 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 16:21:16,916 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:21:17,041 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:21:17,041 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:21:17,041 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:21:17,150 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:21:17,534 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:21:17,854 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:21:19,471 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 16:29:07,218 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:29:07,346 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:29:07,346 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:29:07,346 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:29:07,424 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:29:07,815 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:29:08,115 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:29:09,743 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 16:29:54,512 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:29:54,637 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:29:54,637 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:29:54,637 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:29:54,715 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:29:55,083 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:29:55,393 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:29:57,034 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 16:32:32,969 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:32:33,090 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:32:33,090 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:32:33,090 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:32:33,168 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:32:33,534 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:32:33,846 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:32:35,465 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 16:40:29,181 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:40:29,294 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:40:29,294 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:40:29,294 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:40:29,377 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:40:29,736 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:40:30,065 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:45:46,865 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:45:46,990 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:45:46,990 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:45:46,990 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:45:47,073 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:45:47,472 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:45:47,784 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 16:46:47,674 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 16:46:47,803 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 16:46:47,803 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 16:46:47,803 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 16:46:47,882 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 16:46:48,279 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 16:46:48,579 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 17:07:54,458 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 17:07:54,583 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 17:07:54,583 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 17:07:54,583 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 17:07:54,661 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 17:07:55,052 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 17:07:55,360 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 17:07:56,981 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-23 17:09:41,481 INFO  [LogHelper]  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-23 17:09:41,602 INFO  [Version]  - HHH000412: Hibernate Core {5.2.1.Final}
+2018-06-23 17:09:41,604 INFO  [Environment]  - HHH000206: hibernate.properties not found
+2018-06-23 17:09:41,606 INFO  [Environment]  - HHH000021: Bytecode provider name : javassist
+2018-06-23 17:09:41,686 INFO  [Version]  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-23 17:09:42,077 INFO  [Dialect]  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-23 17:09:42,391 INFO  [Version]  - HV000001: Hibernate Validator 5.2.1.Final
+2018-06-23 17:09:44,034 INFO  [QueryTranslatorFactoryInitiator]  - HHH000397: Using ASTQueryTranslatorFactory

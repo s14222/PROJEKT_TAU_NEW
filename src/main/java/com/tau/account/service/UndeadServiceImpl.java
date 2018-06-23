@@ -74,8 +74,4 @@ public class UndeadServiceImpl implements UndeadService {
         return undeadRepository.findById(Id);
     }
 
-    @Override
-    public List<Undead> findByMale(Undead undeadList) {
-        return undeadRepository.findByMale(undeadList);
-    }
 }

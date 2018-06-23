@@ -4,6 +4,7 @@ import com.github.springtestdbunit.DbUnitTestExecutionListener;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.github.springtestdbunit.annotation.ExpectedDatabase;
 import com.github.springtestdbunit.assertion.DatabaseAssertionMode;
+import com.tau.account.model.Undead;
 import com.tau.account.model.User;
 import com.tau.account.service.interfaces.UndeadService;
 import com.tau.account.service.interfaces.UserService;
@@ -20,10 +21,11 @@ import org.springframework.test.context.transaction.TransactionalTestExecutionLi
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:/appconfig-data.xml"})
+@ContextConfiguration(locations = {"classpath:/appconfig-root.xml"})
 @Rollback
 @Transactional(transactionManager = "transactionManager")
 @TestExecutionListeners({
@@ -52,7 +54,6 @@ public class UndeadManagerDBUnitTest {
         User u = new User();
         u.setUsername("LimChangkyun");
         u.setPassword("diction");
-        u.setPesel("95122113440");
 
         userService.save(u);
 
@@ -68,7 +69,7 @@ public class UndeadManagerDBUnitTest {
 
         assertEquals(3, userService.findAll().size());
 
-        User user = userService.findByPesel("85043021547");
+        User user = userService.findById(5L);
 
         userService.delete(user);
 
@@ -84,13 +85,13 @@ public class UndeadManagerDBUnitTest {
     public void updateUserCheck() throws Exception {
 
 
-        User user = userService.findByPesel("43012144859");
+        User user = userService.findById(4L);
 
         user.setUsername("WonhoUlzzang");
 
         userService.update(user);
 
-        assertEquals(userService.findByPesel("43012144859").getUsername(), user.getUsername());
+        assertEquals(userService.findById(4L).getUsername(), user.getUsername());
 
 
     }
@@ -101,11 +102,11 @@ public class UndeadManagerDBUnitTest {
             assertionMode = DatabaseAssertionMode.NON_STRICT)
     public void getUserCheck() throws Exception {
 
-        User user = userService.findByPesel("12043021547");
+        User user = userService.findById(4L);
 
         assertNotNull(user);
         //sprawdzamy czy ten pobrany wyzej user jest taki sam jak ten w bazie /czy nie jest nullem, czy poprawnie go pobiera/
-        assertEquals(userService.findByPesel("12043021547").getUsername(), user.getUsername());
+        assertEquals(userService.findById(4L).getUsername(), user.getUsername());
     }
 
 
@@ -116,14 +117,18 @@ public class UndeadManagerDBUnitTest {
     public void disposeUndeadCheck() throws Exception {
 
         //usuwanie powiazania usera z undeada, czyli usuwanie undeada
-        User user = userService.findByPesel("12043021547");
+        User user = userService.findById(4L);
 
-//        assertEquals(2, user.getUndeadList().size());
-//
-//        Undead undead = user.getUndeadList().get(0);
-//        //undeadManager.disposeUndead(user, undead);
-//
-//        assertEquals(1, user.getUndeadList().size());
+        assertNotNull(user.getUndeadList());
+
+        assertFalse(user.getUndeadList().isEmpty());
+
+        assertEquals(2, user.getUndeadList().size());
+
+        Undead undead = user.getUndeadList().get(0);
+        undeadService.disposeUndead(user, undead);
+
+        assertEquals(1, user.getUndeadList().size());
 
     }
 

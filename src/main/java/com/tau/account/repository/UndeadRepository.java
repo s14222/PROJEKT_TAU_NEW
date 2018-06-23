@@ -16,8 +16,6 @@ public interface UndeadRepository extends JpaRepository<Undead, Long> {
 
     Undead findById(Long id);
 
-    List<Undead> findByMale(Undead undeadList);
-
     Undead findByName(String name);
 
   //  void saveWithUserName(Undead undead, String userName);

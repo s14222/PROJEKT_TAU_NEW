@@ -13,7 +13,6 @@ public interface UserService {
    // Long addUser(User user);
     List<User> findAll();
     void delete(User user);
-    User findByPesel(String pesel);
     void update(User user);
     //List<Undead> findByUndeadList(User user);
 
