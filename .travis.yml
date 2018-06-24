@@ -1,4 +1,6 @@
 language: java
 script:
+mvn test
 
-- cd src; mvn test
+services:
+  - mysql
