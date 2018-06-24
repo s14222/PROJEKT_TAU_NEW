@@ -1,4 +1,6 @@
 language: java
 script:
-- cd src; bash scripts/server.sh
 - cd src; mvn test
+
+services:
+  - mysql
