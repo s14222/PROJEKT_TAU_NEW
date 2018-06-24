@@ -1,6 +1,6 @@
 language: java
 script:
-mvn test
+- mvn test
 
 services:
   - mysql
