@@ -8,7 +8,7 @@ services:
 addons:
   apt:
     sources:
-      - mysql-8.0.11-trusty
+      - mysql-5.7-trusty
     packages:
       - mysql-server
       - mysql-client
