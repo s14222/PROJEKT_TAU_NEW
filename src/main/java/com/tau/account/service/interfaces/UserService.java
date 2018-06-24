@@ -1,6 +1,5 @@
 package com.tau.account.service.interfaces;
 
-import com.tau.account.model.Undead;
 import com.tau.account.model.User;
 
 import java.util.List;
@@ -17,4 +16,6 @@ public interface UserService {
     //List<Undead> findByUndeadList(User user);
 
     User findById(Long id);
+
+    void saveUser(User u);
 }

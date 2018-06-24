@@ -8,6 +8,7 @@ import com.tau.account.model.Undead;
 import com.tau.account.model.User;
 import com.tau.account.service.interfaces.UndeadService;
 import com.tau.account.service.interfaces.UserService;
+import com.tau.account.service.interfaces.User_undeadService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +21,9 @@ import org.springframework.test.context.support.DirtiesContextTestExecutionListe
 import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:/appconfig-root.xml"})
@@ -42,6 +43,9 @@ public class UndeadManagerDBUnitTest {
     @Autowired
     UserService userService;
 
+    @Autowired
+    User_undeadService user_undeadService;
+
     @Test
     @DatabaseSetup(value = {"/fullData.xml"}) //wczytywanie danych z pliku
     @ExpectedDatabase(value = "/aaddUserData.xml", //oczekiwane dane wyjsciowe
@@ -55,7 +59,7 @@ public class UndeadManagerDBUnitTest {
         u.setUsername("LimChangkyun");
         u.setPassword("diction");
 
-        userService.save(u);
+        userService.saveUser(u);
 
         assertEquals(4, userService.findAll().size());
 
@@ -117,35 +121,40 @@ public class UndeadManagerDBUnitTest {
     public void disposeUndeadCheck() throws Exception {
 
         //usuwanie powiazania usera z undeada, czyli usuwanie undeada
-        User user = userService.findById(4L);
+        User user = userService.findById(3L);
 
-        assertNotNull(user.getUndeadList());
+        assertNotNull(user);
+        List<Undead> undead = undeadService.findByUserName(user.getUsername());
+        assertEquals(3, undead.size());
+        assertNotNull(undead);
+        assertFalse(undead.isEmpty());
 
-        assertFalse(user.getUndeadList().isEmpty());
+        user_undeadService.dispose(user.getId(), undead.get(0).getId() );
 
-        assertEquals(2, user.getUndeadList().size());
+        List<Undead> undead2 = undeadService.findByUserName(user.getUsername());
 
-        Undead undead = user.getUndeadList().get(0);
-        undeadService.disposeUndead(user, undead);
+        assertNotNull(undead2);
+        assertEquals(2, undead2.size());
 
-        assertEquals(1, user.getUndeadList().size());
+
 
     }
 
-    @Test
+  /*  @Test
     @DatabaseSetup(value = {"/fullData.xml"})
-    @ExpectedDatabase(value = "/aundeadsList.xml",
+    @ExpectedDatabase(value = "/ausersundead.xml",
             assertionMode = DatabaseAssertionMode.NON_STRICT)
     public void getUsersUndeads() throws Exception {
 
-//        User user = undeadManager.findUserByPesel("12043021547");
-//
-//        assertNotNull(user);
-//
-//        assertNotNull(user.getUndeadList());
-//
-//        assertEquals(2, user.getUndeadList().size());
-    }
+
+       user_undeadService.findUser_undeadBy(0L);
+
+       assertNotNull(user);
+
+      assertNotNull(user.getUndeadList());
+
+        assertEquals(2, user.getUndeadList().size());
+    }*/
 
 
 }

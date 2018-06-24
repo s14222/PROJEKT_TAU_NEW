@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void save(User user) {
-        //user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 
         userRepository.save(user);
     }
@@ -57,5 +57,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findById(Long id) {
         return userRepository.findById(id);
+    }
+
+    @Override
+    public void saveUser(User u) {
+        userRepository.save(u);
     }
 }

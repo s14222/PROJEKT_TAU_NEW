@@ -1,17 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset>
-    <UNDEAD ID="3" NAME="AGUST D" ABILITY="Killing only by watching" STRENGTH="100" HEALTH="50"/>
-    <UNDEAD ID="4" NAME="SUGA" ABILITY="Being a stone" STRENGTH="0" HEALTH="200"/>
-    <UNDEAD ID="5" NAME="STEFAN" ABILITY="Jedzenie parówek" STRENGTH="100" HEALTH="100"/>
-    <UNDEAD ID="6" NAME="KIHYUN" ABILITY="Powerful voice" STRENGTH="120" HEALTH="130"/>
+    <UNDEAD ID="3" NAME="AGUST D" USERNAME="ShinHoseok" ABILITY="Killing only by watching" STRENGTH="100" HEALTH="50"/>
+    <UNDEAD ID="4" NAME="SUGA" USERNAME="ShinHoseok" ABILITY="Being a stone" STRENGTH="0" HEALTH="200"/>
+    <UNDEAD ID="5" NAME="STEFAN" USERNAME="ShinHoseok" ABILITY="Jedzenie parówek" STRENGTH="100" HEALTH="100"/>
+    <UNDEAD ID="6" NAME="KIHYUN" USERNAME="KimYugyeom" ABILITY="Powerful voice" STRENGTH="120" HEALTH="130"/>
 
 
     <USER ID="3" USERNAME="ShinHoseok" PASSWORD="bbbbbbb"/>
     <USER ID="4" USERNAME="MinYoongi" PASSWORD="nndiction"/>
     <USER ID="5" USERNAME="KimYugyeom" PASSWORD="bubububu"/>
 
-    <USER_UNDEAD USERID="3" UNDEADID="3"/>
+ <!-- <USER_UNDEAD USERID="3" UNDEADID="3"/>
     <USER_UNDEAD USERID="4" UNDEADID="6"/>
-    <USER_UNDEAD USERID="4" UNDEADID="4"/>
-
+    <USER_UNDEAD USERID="4" UNDEADID="4"/>-->
 </dataset>

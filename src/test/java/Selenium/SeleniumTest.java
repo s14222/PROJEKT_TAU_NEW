@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
 
 
 public class SeleniumTest {
-  /*  private WebDriver driver;
+    private WebDriver driver;
     private String baseUrl;
     private StringBuffer verificationErrors = new StringBuffer();
 
@@ -45,7 +45,7 @@ public class SeleniumTest {
         if (checkIfErrorExist("#registerFormId")) {
             //sprawdz czy jest blad w username
             String alertMessage = driver.findElement(By.cssSelector("#username\\2e errors")).getText();
-            System.out.println("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"+ alertMessage);
+
             assertNotNull(alertMessage);
 
             driver.findElement(By.id("usernameInputId")).clear();
@@ -146,5 +146,5 @@ public class SeleniumTest {
         username = username + c.toString();
         return username;
     }
-*/
+
 }

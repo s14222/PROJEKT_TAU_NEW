@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `undeaddb`;
-USE `undeaddb`;
+CREATE DATABASE  IF NOT EXISTS `undeads`;
+USE `undeads`;
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (

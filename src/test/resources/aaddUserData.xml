@@ -4,13 +4,12 @@
     <!-- (nie ) musi byc pierwszy -->
 
     <USER USERNAME="ShinHoseok" PASSWORD="bbbbbbb"/>
-
     <USER USERNAME="MinYoongi" PASSWORD="nndiction"/>
     <USER USERNAME="KimYugyeom" PASSWORD="bubububu"/>
     <USER USERNAME="LimChangkyun" PASSWORD="diction"/>
 
-    <USER_UNDEAD USERID="3" UNDEADID="3"/>
+  <!--  <USER_UNDEAD USERID="3" UNDEADID="3"/>
     <USER_UNDEAD USERID="4" UNDEADID="6"/>
-    <USER_UNDEAD USERID="4" UNDEADID="4"/>
+    <USER_UNDEAD USERID="4" UNDEADID="4"/>-->
 
 </dataset>

@@ -20,6 +20,7 @@
     </authentication-manager>
 
     <beans:bean id="userDetailsServiceImpl" class="com.tau.account.service.UserDetailsServiceImpl"/>
+    <beans:bean id="user_undeadServiceImpl" class="com.tau.account.service.User_undeadServiceImpl"/>
 
     <beans:bean id="encoder"
           class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
