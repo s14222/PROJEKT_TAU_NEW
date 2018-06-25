@@ -13,7 +13,6 @@ public interface UserService {
     List<User> findAll();
     void delete(User user);
     void update(User user);
-    //List<Undead> findByUndeadList(User user);
 
     User findById(Long id);
 

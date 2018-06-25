@@ -17,7 +17,7 @@ import java.util.List;
 @Controller
 public class UndeadController {
 
-    @Autowired //soring sam sbie przydziela wartosc
+    @Autowired //spring sam sbie przydziela wartosc
     private UndeadService undeadService;
 
     @Autowired

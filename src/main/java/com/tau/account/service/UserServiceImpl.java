@@ -49,10 +49,6 @@ public class UserServiceImpl implements UserService {
 
     }
 
-//    @Override
-//    public List<Undead> findByUndeadList(User user) {
-//        return userRepository.findByUndeadList(user);
-//    }
 
     @Override
     public User findById(Long id) {

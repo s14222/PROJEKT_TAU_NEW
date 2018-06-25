@@ -19,13 +19,12 @@ public interface UndeadService {
 
     Undead findById(Long Id);
 
-    //List<Undead> getMaleUndeads();
 
    // void saveWithUserName(Undead undead, String userName);
 
 
    // void assignedUndead(Long userId, Long undeadId);
   //  void disposeUndead(User user, Undead undead);
-    void disposeUndead(User user, Undead undead);
+    //void disposeUndead(User user, Undead undead);
 
 }

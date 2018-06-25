@@ -29,19 +29,14 @@ public class UndeadServiceImpl implements UndeadService {
         undeadRepository.save(undead);
     }
 
-    /*@Override
-    public void saveWithUserName(Undead undead, String userName){
-        undead.setUserName(userName);
-        undeadRepository.save(undead);
-    }*/
 
-    @Override
+   /* @Override
     public void disposeUndead(User user, Undead undead) {
         //dispose
         if(user.getUsername().equals(undead.getUserName())){
             undead.setUserName("");
         }
-    }
+    }*/
 
     @Override
     public void delete(Undead undead) {

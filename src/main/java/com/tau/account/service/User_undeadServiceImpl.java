@@ -40,20 +40,18 @@ public class User_undeadServiceImpl implements User_undeadService {
         Undead undeadToDispose = undeadService.findById(undeadId);
         if(undeadToDispose!= null){
 
-           // undeadToDispose.setUserName("");
-           // undeadToDispose.setUserId(0L);
             undeadService.delete(undeadToDispose);
-           // undeadService.save(undeadToDispose);
+
 
         }
 
-        User_undead user_undeadToDispose = user_undeadRepository.findByUndeadId(undeadId);
+        /*User_undead user_undeadToDispose = user_undeadRepository.findByUndeadId(undeadId);
 
         if(user_undeadToDispose!= null && undeadToDispose!= null){
             user_undeadToDispose.setUserId(0L);
             user_undeadRepository.save(user_undeadToDispose);
 
-        }
+        }*/
 
 
     }
